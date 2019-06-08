@@ -1,17 +1,24 @@
 # monkey
-A simple programming language. This repo contains a compiler for it. Based on `Writing an Intrepretea` by Thorsten Ball.
+A simple programming language. This repo contains an interpreter for it. Based on `Writing an Interpreter in Go` by Thorsten Ball.
+
+## To dos
+- [ ] Lexer
+- [ ] Parser
+- [ ] AST
+- [ ] Internal object system
+- [ ] Evaluator
 
 ## Language Features
 - C-like syntax
-- variable bindings
-- integers and booleans
-- arithmetic expressions
-- built-in functions
-- first-class and higher-order functions
-- closures
-- a string data structure
-- an array data structure
-- a hash data structure
+- Variable bindings
+- Integers and booleans
+- Arithmetic expressions
+- Built-in functions
+- First-class and higher-order functions
+- Closures
+- A string data structure
+- An array data structure
+- A hash data structure
 
 ## Syntax
 ### Assigning variables
@@ -27,7 +34,7 @@ let myArray = [1, 2, 3, 4, 5];
 let user = {"name": "Ricky", "age": 28};
 
 myArray[0]       // => 1
-thorsten["name"] // => "Ricky"
+user["name"] // => "Ricky"
 ```
 
 ### Functions
@@ -60,12 +67,6 @@ let twice = fn(f, x) {
 let addTwo = fn(x) {
   return x + 2;
 };
+
 twice(addTwo, 2); // => 6
 ```
-
-## To dos
-- [ ] Lexer
-- [ ] Parser
-- [ ] AST
-- [ ] internal object system
-- [ ] evaluator
